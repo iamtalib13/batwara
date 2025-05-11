@@ -5,12 +5,24 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "paid_by",
+  "column_break_tzsw",
+  "split_method",
+  "section_break_ogic",
+  "split",
+  "section_break_ufmo",
   "date",
+  "amount",
+  "currency",
+  "column_break_qtby",
+  "description",
+  "notes",
   "section_break_kauw",
   "amended_from"
  ],
  "fields": [
   {
+   "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "label": "Date",
@@ -29,13 +41,77 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_qtby",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "INR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "paid_by",
+   "fieldtype": "Link",
+   "label": "Paid By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_ufmo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "split",
+   "fieldtype": "Table",
+   "label": "Split",
+   "options": "Expense Split"
+  },
+  {
+   "fieldname": "split_method",
+   "fieldtype": "Select",
+   "label": "Split Method",
+   "options": "Equally\nManual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ogic",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tzsw",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-11 23:18:00.610931",
+ "modified": "2025-05-11 23:51:39.765614",
  "modified_by": "Administrator",
  "module": "Batwara",
  "name": "Expense",
